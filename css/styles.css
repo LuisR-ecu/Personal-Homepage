@@ -1,0 +1,42 @@
+/* custom hero-section styling */
+#Bio {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../images/Ecu-background.avif");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* scrolling effect */
+}
+
+/* ensure dark theme renders native controls correctly */
+html.dark {
+    color-scheme: dark;
+}
+
+.card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* nav underline animation */
+.nav-link {
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
